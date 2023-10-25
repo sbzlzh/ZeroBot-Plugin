@@ -40,7 +40,6 @@ func init() { // 插件主体
 	// 戳一戳
 	engine.On("notice/notify/poke", zero.OnlyToMe).SetBlock(false).
 		Handle(func(ctx *zero.Ctx) {
-			var nickname = zero.BotConfig.NickName[0]
 			switch {
 			case poke.Load(ctx.Event.GroupID).AcquireN(3):
 				// 5分钟共8块命令牌 一次消耗3块命令牌
