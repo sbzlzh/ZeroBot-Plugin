@@ -393,7 +393,7 @@ func init() { // 插件主体
 				if err == nil {
 					ctx.SendGroupMessage(ctx.Event.GroupID, message.ParseMessageFromString(welcometocq(ctx, w.Msg)))
 
-					//ctx.SendChain(message.Text("欢迎~"))
+					// ctx.SendChain(message.Text("欢迎~"))
 				}
 				c, ok := ctx.State["manager"].(*ctrl.Control[*zero.Ctx])
 				if ok {
@@ -445,7 +445,7 @@ func init() { // 插件主体
 				if err == nil {
 					ctx.SendGroupMessage(ctx.Event.GroupID, message.ParseMessageFromString(welcometocq(ctx, w.Msg)))
 
-					//userid := ctx.Event.UserID
+					// userid := ctx.Event.UserID
 					//ctx.SendChain(message.Text(ctx.CardOrNickName(userid), "(", userid, ")", "离开了我们..."))
 				}
 			}
