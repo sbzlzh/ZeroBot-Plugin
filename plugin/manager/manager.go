@@ -391,7 +391,7 @@ func init() { // 插件主体
 				var w welcome
 				err := db.Find("welcome", &w, "where gid = "+strconv.FormatInt(ctx.Event.GroupID, 10))
 				if err == nil {
-					ctx.SendGroupMessage(ctx.Event.GroupID, message.ParseMessageFromString(welcometocq(ctx, w.Msg))
+					ctx.SendGroupMessage(ctx.Event.GroupID, message.ParseMessageFromString(welcometocq(ctx, w.Msg)))
 				// } else {
 					// ctx.SendChain(message.Text("欢迎~"))
 				}
